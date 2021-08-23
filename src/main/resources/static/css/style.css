@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    background-color: #252525;
+  }
+  
+
+.header_container {
+    background-color: #212121;
+    color:#fff;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_name {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 0;
+  cursor: pointer;
+}
+
+.icon {
+    width: 33px;
+    height: 33px;
+    margin-top: 3px;
+    margin-left: 15px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 28px;
+    margin-left: 5px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+
+.search_form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 5px 0px rgba(255, 122, 24, 0.8);
+  height: 24px;
+  padding: 3px 10px;
+  border-radius: 15px;
+  
+}
+
+.search_form:hover {
+  box-shadow: 0px 0px 10px 0px rgba(255, 122, 24, 1);
+}
+
+.search_input {
+  background-color: #212121;
+  color: #fff;
+  border: none;
+  outline: none;
+  min-width: 250px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+ -webkit-box-shadow: 0 0 0 30px #212121 inset !important;
+ -webkit-text-fill-color: #fff !important;
+}
+
+.search_icon {
+  background: url("../img/search-icon.png");
+  background-size: cover;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  border: none;
+}
+
+
+.container {
+  color: #fff;
+}
+
+.container_title {
+  font-size: 38px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+.cryptocurrencies {
+  max-width: 95%;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.crypto {
+  border-radius: 15px;
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 50%);
+  margin: 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(45deg,#434343,#282828);
+}
+
+.crypto_card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #ff7a18;
+}
+
+.crypto_icon {
+  width: 65px;
+  height: 65px;
+}
+
+.crypto_name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.crypto_icon, .crypto_name, .crypto_priceUSD, .crypto_priceRUB, .crypto_delta24, .crypto_delta7 {
+  padding-bottom: 10px;
+}
+
+.text {
+  color: #d4d4d4;
+}
+
+
+
+
+
+.footer {
+  position: relative;
+  margin-top: 50px;
+}
+
+.footer_text {
+  position: absolute;
+  left: 25px;
+  top: 220px;
+  font-weight: bold;
+  font-size: 24px;
+}

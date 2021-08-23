@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto-Tracker</title>
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>
+
+    <header>
+        <div class="header_container">
+            <div class="header_name">
+                <img class="icon" th:src="@{img/crypto-icon.png}">
+                <div class="title">CryptoTracker</div>
+            </div>
+            <form class="search_form" action="#" th:action="@{/search}" method="get">
+                <input class="search_input" type="text" name="crypto" placeholder="Bitcoin..."/>
+                <input type="submit" class="search_icon" value=""/>
+            </form>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="container_title" th:inline="text">Cryptocurrency Prices for Today, [[${date}]]</div>
+        
+        <div class="cryptocurrencies">
+            <div class="crypto" th:each="crypto : ${cryptoes}">
+                <img class="crypto_icon" th:src="@{${'/img/crypto/' + crypto.symbol + '.png'}}">
+                <span class="crypto_name" th:text="${crypto.name}"></span>
+                <span class="crypto_priceUSD" th:inline="text"><span class="text">Price (USD):</span> $[[${crypto.costCurrentUSD}]]</span>
+                <span class="crypto_priceRUB" th:inline="text"><span class="text">Price (RUB):</span> ₽[[${crypto.costCurrentRUB}]]</span>
+                <span class="crypto_delta24" th:inline="text"><span class="text">24h change (%):</span> [[${crypto.deltaDayPercentage}]]%</span>
+                <span class="crypto_delta7" th:inline="text"><span class="text">7d change (%):</span> [[${crypto.deltaWeekPercentage}]]%</span>
+                <span class="crypto_volume24" th:inline="text"><span class="text">Volume 24h:</span> $[[${crypto.tradingVolumeDay}]]$</span>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff7a18" fill-opacity="1" d="M0,0L34.3,37.3C68.6,75,137,149,206,160C274.3,171,343,117,411,90.7C480,64,549,64,617,69.3C685.7,75,754,85,823,117.3C891.4,149,960,203,1029,240C1097.1,277,1166,299,1234,277.3C1302.9,256,1371,192,1406,160L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+        <div class="footer_text">Author - <a href="https://github.com/Natsuo-HSR">Natsuo</a></div>
+    </div>
+
+</body>
+</html>
