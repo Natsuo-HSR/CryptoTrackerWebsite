@@ -23,7 +23,7 @@ import java.util.*;
 public class CryptoService {
 
 
-    private static String apiKey = "1982de07-4c2f-4eba-a6e3-8b1eeb372b50";
+    private static String apiKey; // KEY 
     private static String uri = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest";
     private static String cryptoes = "BTC,ETH,USDT,BNB,ADA,DOGE,XRP,LTC,USDC,DOT,BUSD,ETC,BCH,EOS,LINK,MATIC,THETA,WBTC,XLM,DAI";
 
