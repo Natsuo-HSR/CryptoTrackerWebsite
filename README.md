@@ -1,5 +1,5 @@
 # CryptoTracker Website
-Simple cryptocurrency tracker website, supporting 20 main currencies.
+Cryptocurrency tracker website, displaying statistics for 20 most popular cryptocurrencies.
 
 Spring Boot + Apache HTTPComponents + Thymeleaf
 
